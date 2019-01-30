@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_reporter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/dd_shape_white_content_top_5"
+        android:paddingLeft="30dp"
+        android:paddingTop="35dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_identy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="认证："
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_identy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_identy_text"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="日报记者，plus记者"
+            android:textColor="#999999" />
+
+        <TextView
+            android:id="@+id/tv_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_identy_text"
+            android:layout_marginTop="5dp"
+            android:text="简介："
+            android:textColor="#999999"
+            android:textSize="13sp" />
+
+        <com.xl.expandtext.ExpandTextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/rl_info"
+            android:layout_below="@+id/tv_identy"
+            android:layout_toRightOf="@+id/tv_info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.xl.expandtext.ExpandTextView>
+
+        <View
+            android:id="@+id/line_devider"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/rl_info"
+            android:layout_marginTop="15dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_devider"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_countArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="文章数"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_countClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="阅读数"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="56dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/dd_shape_3a84e9_stroke_ffffffff_content_3"
+                android:gravity="center"
+                android:text="查看数据"
+                android:textColor="@color/blue_3a84e9"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
